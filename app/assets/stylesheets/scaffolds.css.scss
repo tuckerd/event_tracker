@@ -10,6 +10,7 @@ p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  padding: 5px;
 }
 
 pre {
@@ -18,14 +19,25 @@ pre {
   font-size: 11px;
 }
 
+h1, h2, h3 {
+  color: blue;
+}
+
+th {
+  background-color: #E0EAF1;
+}
+
+td:odd {
+  background-color: green;
+}
+
 a {
-  color: #000;
+  color: blue;
   &:visited {
-    color: #666;
+    color: #4a6b82;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: green;
   }
 }
 

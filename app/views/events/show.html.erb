@@ -20,6 +20,5 @@
   <%= @event.category %>
 </p>
 
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to image_tag("back.png", alt: 'Back'), events_path %>
+<%= link_to image_tag("edit.png", alt: "Edit"), edit_event_path(@event) %>
