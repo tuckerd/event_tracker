@@ -1,24 +1,25 @@
+<h1><%= t "events.show" %></h1>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <b><%= t "labels.title" %>:</b>
   <%= @event.title %>
 </p>
 
 <p>
-  <b>Date:</b>
+  <b><%= t "labels.date" %>:</b>
   <%= @event.date %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b><%= t "labels.description" %>:</b>
   <%= @event.description %>
 </p>
 
 <p>
-  <b>Category:</b>
+  <b><%= t "labels.category" %>:</b>
   <%= @event.category %>
 </p>
 
 <%= link_to image_tag("back.png", alt: 'Back'), events_path %>
-<%= link_to image_tag("edit.png", alt: "Edit"), edit_event_path(@event) %>
+<%= link_to image_tag("edit.png", alt: 'Edit'), edit_event_path(@event) %>

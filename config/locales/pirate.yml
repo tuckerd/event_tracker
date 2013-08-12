@@ -1,0 +1,29 @@
+pirate:
+  time:
+    formats:
+      default: "%m %d %y %H:%M"
+      short: "%m/%d/%y %H:%M"
+  navigation:
+    edit: Edit
+    tools: Tools
+  events:
+    edit: "Editin' Events"
+    index: "Upcommin' Events"
+    new: "New Event"
+    show: "Event Details"
+    empty: "No upcomin' events scheduled."
+    create:
+      success: "Aye captain, successfully created event"
+  labels:
+    date: Date
+    title: Title
+    category: Category
+    description: "What be you up to?"
+  activerecord:
+    errors:
+      models:
+        event:
+          attributes:
+            title:
+              blank: "You better be givin' me a title bucko"
+

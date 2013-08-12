@@ -1,5 +1,0 @@
-== Event Tracker
-=== CodeFellows - App A Day
-
-This app tracks important dates and sorts them
-

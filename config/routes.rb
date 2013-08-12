@@ -1,7 +1,9 @@
 EventTracker::Application.routes.draw do
   root to: "events#index"
-  resources :events
 
+  scope ":locale" do
+    resources :events
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
