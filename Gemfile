@@ -3,11 +3,12 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+  # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
 gem 'simple_form'
 gem 'browser-timezone-rails' #detect timezone as a cookie
+gem 'bootstrap-sass', '~> 2.3.2.1'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -26,6 +27,10 @@ gem 'jquery-rails'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+end
+
+group :development, :test do
+  gem 'dotenv-rails' #auto load env variables
 end
 
 # To use ActiveModel has_secure_password
