@@ -1,27 +1,35 @@
-<h1><%= t "events.index" %></h1>
+<h1 class="page-header text-center"><%= t "events.index" %></h1>
 <% if @events.empty? %>
   <p><% t "events.empty" %></p>
 <% else %>
-  <table>
-    <tr>
-      <th><%= t "events.date"  %></th>
-      <th><%= t "events.category" %></th>
-      <th><%= t "events.title" %></th>
-      <th colspan = 3><%= t "navigation.tools"  %></th>
-    </tr>
+  <table class="table table-hover">
+    <thead>
+      <th class="text-center"><%= t "events.date"  %></th>
+      <th class="text-center"><%= t "events.category" %></th>
+      <th class="text-center"><%= t "events.title" %></th>
+      <th></th>
+    </thead>
 
     <% @events.each do |event| %>
     <tr>
       <td><%= event.date %></td>
       <td><%= event.category %></td>
       <td><%= event.title %></td>
-      <td><%= link_to image_tag("question.png", alt: "Details"), event %></td>
-      <td><%= link_to image_tag("edit.png", alt: "Edit"), edit_event_path(event) %></td>
-      <td><%= link_to image_tag("delete.png", alt: "Delete"), event, method: :delete, data: { confirm: 'Are you sure you wish to delete this event?' } %></td>
+      <td class="btn-group">
+        <%= link_to event, class:"btn btn-primary" do %>
+          <i class="icon-eye-open icon-white"></i> Details<% end %>
+        <%= link_to edit_event_path(event), class:"btn btn-primary" do %>
+          <i class="icon-edit icon-white"></i> Edit<% end %>
+        <%= link_to event, method: :delete, 
+              data: { confirm: 'Are you sure you wish to delete this event?' },
+              class:"btn btn-primary" do %>
+            <i class="icon-trash icon-white"></i> Delete
+        <% end %>
+      </td>
     </tr>
     <% end %>
   </table>
 <% end %>
 
 <br />
-<%= link_to image_tag("new.png") + (t "events.new"), new_event_path %>
+<%= link_to new_event_path, class: "btn btn-primary" do %> <i class="icon-plus icon-white"></i> New Event<% end %>

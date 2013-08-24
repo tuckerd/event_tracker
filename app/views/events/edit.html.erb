@@ -1,5 +1,4 @@
-<h1><%= t "events.edit" %></h1>
+<h1 class="page-header text-center"><%= t "events.edit" %></h1>
 
 <%= render 'form' %>
-
-<%= link_to image_tag("back.png", title: "Back"), events_path %>
+<%= link_to events_path, class:"btn btn-primary" do %><i class="icon-arrow-left icon-white"></i> Back<% end %>

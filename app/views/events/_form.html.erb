@@ -1,8 +1,8 @@
-<%= simple_form_for @event do |f| %>
+<%= simple_form_for @event, class:"form-horizontal" do |f| %>
   <%= f.error_notification %>
   <%= f.input :title %>
   <%= f.input :category %>
-  <%= f.input :date, {use_short_month: true, order: [:month, :day, :year]} %>
+  <%= f.input :date, {use_short_month: true, order: [:month, :day, :year]}%>
   <%= f.input :description %>
 
   <%= f.error :base %>
